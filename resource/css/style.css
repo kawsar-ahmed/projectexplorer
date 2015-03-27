@@ -63,6 +63,21 @@
     vertical-align: middle;
 }
 
+.search-form-content{
+    display: none;
+}
+.search-form-top{
+        display: inline-block;
+    }
+
+@media(max-width:976px){
+    .search-form-content{
+        display: block;
+    }
+    .search-form-top{
+        display: none;
+    }
+}
 @media(max-width:380px){
     
     .container,.container-fluid,.navbar-brand{

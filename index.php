@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>PHP Explorer Tree</title>
+        <title>Project Explorer</title>
         <link rel="stylesheet" href="./resource/css/bootstrap.min.css">
         <link rel="stylesheet" href="./resource/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="./resource/css/bootstrap-responsive.min.css">
@@ -71,37 +71,38 @@
                         <li class="active"><a href='./' >Project List</a></li>
                         <li ><a href='/phpmyadmin' target="_blank">Php MyAdmin</a></li>
                     </ul>
-                    <!--                    <form class="navbar-form navbar-left" role="search">
-                                            <div class="form-group">
-                                                <input type="text" ng-model="filter.url" placeholder="Search by Project Name" class="input-filter form-control ng-pristine ng-valid ng-scope ng-touched" />
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" ng-model="filter.ftype" placeholder="Search by File Type" class="input-filter form-control ng-pristine ng-valid ng-scope ng-touched" />
-                                            </div>
-                                            <div class="form-group">
-                                               
-                                            </div>
-                                        </form>-->
+                    <form class="navbar-form navbar-left search-form-top" role="search">
+                        <label for="SearchForm" class="control-label">Filter:</label>
+                        <div class="form-group">
+                            <input type="text" ng-model="filter.url" placeholder="Search by Project Name" class="input-filter form-control ng-pristine ng-valid ng-scope ng-touched" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" ng-model="filter.ftype" placeholder="Search by File Type" class="input-filter form-control ng-pristine ng-valid ng-scope ng-touched" />
+                        </div>
+                        <div class="form-group">
+
+                        </div>
+                    </form>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
 
         <div class="container-fluid">
-            <div class="panel panel-info">
+            <div class="panel panel-info search-form-content">
                 <div class="panel-heading">
                     Filter:
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal">
-                        <div class="form-group left">
-                            <label for="SearchbyProjectName" class="col-md-4 col-sm-4 control-label">Project Name</label>
-                            <div class="col-md-6 col-sm-6">
+                        <div class="form-group left col-md-6 col-sm-6">
+                            <label for="SearchbyProjectName" class="col-md-4 col-sm-6 control-label">Project Name</label>
+                            <div class="col-md-8 col-sm-6">
                                 <input type="text" ng-model="filter.url" placeholder="Search by Project Name" class="input-filter form-control ng-pristine ng-valid ng-scope ng-touched" />
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="SearchbyFileType" class="col-md-4 col-sm-4 control-label">File Type</label>
-                            <div class="col-md-6 col-sm-6">
+                        <div class="form-group col-md-6 col-sm-6">
+                            <label for="SearchbyFileType" class="col-md-4 col-sm-6 control-label">File Type</label>
+                            <div class="col-md-8 col-sm-6">
                                 <input type="text" ng-model="filter.ftype" placeholder="Search by File Type" class="input-filter form-control ng-pristine ng-valid ng-scope ng-touched" />
                             </div>
                         </div>
@@ -202,7 +203,7 @@
                                                         data;
                                                     params.total(orderedData.length); // set total for recalc pagination
                                                     $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
-//                                                    $defer.resolve($scope.users);
+//                                                    $defer.resolve(orderedData);
                                                 }
                                             });
 
